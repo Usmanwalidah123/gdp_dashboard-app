@@ -20,7 +20,10 @@ if page == "Stock Price":
     
     # Optional: Auto-refresh this page every 60 seconds
     # st_autorefresh is only available in Streamlit >= 1.18
-    st_autorefresh = st.experimental_rerun  # fallback if st_autorefresh is not available
+    
+    # Comment out or remove the fallback line that caused errors:
+    # st_autorefresh = st.experimental_rerun  # <-- commented out
+    
     # Uncomment the line below if you have a recent Streamlit version
     # st_autorefresh(interval=60000, key="stock_autorefresh")
 
@@ -47,7 +50,6 @@ elif page == "GDP Dashboard":
     st.header("GDP Dashboard")
 
     # Auto-refresh every 60 seconds (simulated "real-time")
-    # Remove or comment out if you don't need auto-refresh.
     # st_autorefresh(interval=60000, key="gdp_autorefresh")
 
     # Example "static" GDP data
@@ -68,3 +70,4 @@ elif page == "GDP Dashboard":
         title='GDP by Country'
     )
     st.plotly_chart(fig)
+
