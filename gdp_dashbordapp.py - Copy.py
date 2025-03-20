@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title("My Streamlit App")
+st.title("Real-Time Financial Dashboard: Stock Prices & GDP Overview App")
 
 st.write("""
 This app demonstrates two pages:
